@@ -12,11 +12,17 @@ const handler = async (event) => {
         frequency_penalty: 0.1,
         temperature: 0.2
     })
+    // return {
+    //   statusCode: 200,
+    //   body: JSON.stringify({
+    //
+    //     message: response.choices[0].message
+    //     })
+    // }
     return {
       statusCode: 200,
-      body: JSON.stringify({
-        message: response.choices[0].message
-        }),
+      body: JSON.stringify({message: response.choices[0].message.content})
+
     }
   } catch (error) {
     return { statusCode: 500, body: error.toString() }
