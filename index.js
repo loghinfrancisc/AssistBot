@@ -94,22 +94,18 @@ async function fetchReply() {
                 headers: {
                     'Content-Type': 'application/json',
                 },
-                body: conversationArray
-            })
-            const data = await response.json()
-            console.log(data)
+                body: JSON.stringify(conversationArray)
+            });
 
-            // const response = await openai.chat.completions.create({
-            //     messages: conversationArray,
-            //     model: "ft:gpt-3.5-turbo-0125:personal::9RMdu0if",
-            //     presence_penalty: 0,
-            //     frequency_penalty: 0.1,
-            //     temperature: 0.2
-            // })
-            // await push(conversationInDb, response.choices[0].message)
-            // renderTypewriterText(response.choices[0].message.content)
-            await push(conversationInDb, data.response.choices[0].message)
-            renderTypewriterText(data.response.choices[0].message.content)
+            if (!response.ok) {
+                throw new Error(`HTTP error! Status: ${response.status}`);
+            }
+
+            const data = await response.json();
+            console.log(data);
+
+            await push(conversationInDb, data.response);
+            renderTypewriterText(data.response.content);
         } else {
             console.log("No data available");
         }
