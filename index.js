@@ -86,7 +86,6 @@ async function fetchReply() {
         if (snapshot.exists()) {
             const conversationArray = Object.values(snapshot.val())
             conversationArray.unshift(instructionObj)
-            console.log(conversationArray)
 
             const url = 'https://glistening-sfogliatella-2343da.netlify.app/.netlify/functions/fetchAI'
             const response = await fetch(url, {
@@ -98,11 +97,11 @@ async function fetchReply() {
             });
 
             if (!response.ok) {
-                throw new Error(`HTTP error! Status: ${response.status}`);
+                console.error(`HTTP error! Status: ${response.status}`);
+                return; // Exit early
             }
 
             const data = await response.json();
-            console.log(data);
 
             await push(conversationInDb, data.response);
             renderTypewriterText(data.response.content);

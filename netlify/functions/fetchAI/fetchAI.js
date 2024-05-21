@@ -5,8 +5,6 @@ const openai = new OpenAI({
 
 const handler = async (event) => {
   try {
-      console.log(event.body)
-      console.log(JSON.parse(event.body))
     const response = await openai.chat.completions.create({
         messages: JSON.parse(event.body),
         model: "ft:gpt-3.5-turbo-0125:personal::9RMdu0if",
