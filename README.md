@@ -7,7 +7,7 @@ Welcome to AssistBot, a customer support chatbot that leverages a fine-tuned ver
 - **Interactive User Interface:** Built with JavaScript for a seamless and intuitive user experience.
 - **Real-time Database:** Uses Firebase for efficient and scalable database storage.
 - **AI-Powered Support:** Integrates OpenAI's API with a fine-tuned GPT-3.5-turbo model to deliver high-quality customer support.
-- **Rich Training Dataset:** The model is fine-tuned using the Bitext - Customer Service Training Dataset, available on HuggingFace, ensuring comprehensive and relevant assistance.
+- **Rich Training Dataset:** The model is fine-tuned using a sample from the Bitext - Customer Service Training Dataset, available on HuggingFace, ensuring comprehensive and relevant assistance.
 
 ## Technologies Used
 
@@ -15,8 +15,16 @@ Welcome to AssistBot, a customer support chatbot that leverages a fine-tuned ver
 - **Firebase:** For backend database storage and management.
 - **OpenAI API:** To integrate and fine-tune the GPT-3.5-turbo model for customer support functionality.
 - **Vite:** For building and serving the application efficiently.
+- **Netlify:** For deploying the app
 
-If you want to test the app you will have to create your own fine-tuned AI model as currently OpenAI does not allow sharing of custom models. Here is a simplified instruction on how to set up the project.
+## Deployed Application
+
+You can interact with the deployed version of AssistBot by visiting the following link(for testing purposes only):
+
+[AssistBot Deployed App](https://glistening-sfogliatella-2343da.netlify.app)
+
+
+If you want to test the app on your own system, you will need to create your own fine-tuned AI model, as OpenAI currently does not allow the sharing of custom models. Below are simplified instructions on how to set up the project.
 
 ## Getting Started
 
