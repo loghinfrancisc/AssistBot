@@ -1,0 +1,21 @@
+{
+  "name": "AssistBot",
+  "version": "0.0.1",
+  "description": "A customer support chatbot that uses a fine-tuned version of OpenAI's GPT-3.5turbo to generate responses",
+  "type": "module",
+  "dependencies": {
+    "firebase": "^10.8.0",
+    "openai": "^4.28.0"
+  },
+  "devDependencies": {
+    "vite": "latest"
+  },
+  "scripts": {
+    "start": "vite",
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "main": "index.js",
+  "author": "Francisc"
+}
