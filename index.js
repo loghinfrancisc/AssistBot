@@ -86,12 +86,13 @@ async function fetchReply() {
         if (snapshot.exists()) {
             const conversationArray = Object.values(snapshot.val())
             conversationArray.unshift(instructionObj)
+            console.log(conversationArray)
 
             const url = 'https://glistening-sfogliatella-2343da.netlify.app/.netlify/functions/fetchAI'
             const response = await fetch(url, {
                 method: 'POST',
                 headers: {
-                    'Content-Type': 'text/plain',
+                    'Content-Type': 'application/json',
                 },
                 body: conversationArray
             })
@@ -107,6 +108,8 @@ async function fetchReply() {
             // })
             // await push(conversationInDb, response.choices[0].message)
             // renderTypewriterText(response.choices[0].message.content)
+            await push(conversationInDb, data.response.choices[0].message)
+            renderTypewriterText(data.response.choices[0].message.content)
         } else {
             console.log("No data available");
         }
