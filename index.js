@@ -1,12 +1,6 @@
 import { initializeApp } from 'firebase/app'
 import { getDatabase, ref, push, get, remove } from 'firebase/database'
-//
-// import OpenAI from 'openai'
-// // import { process } from './env'
-//
-// const openai = new OpenAI({
-//     apiKey: process.env.OPENAI_API_KEY, dangerouslyAllowBrowser: true
-// })
+
 
 const firebaseConfig = {
     apiKey: "AIzaSyCDgWZsqii17KgmVfNe3Wpyc525FJDdp8E",
