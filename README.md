@@ -17,12 +17,6 @@ Welcome to AssistBot, a customer support chatbot that leverages a fine-tuned ver
 - **Vite:** For building and serving the application efficiently.
 - **Netlify:** For deploying the app
 
-## Deployed Application
-
-You can interact with the deployed version of AssistBot by visiting the following link(for testing purposes only):
-
-[AssistBot Deployed App](https://glistening-sfogliatella-2343da.netlify.app)
-
 
 If you want to test the app on your own system, you will need to create your own fine-tuned AI model, as OpenAI currently does not allow the sharing of custom models. Below are simplified instructions on how to set up the project.
 
